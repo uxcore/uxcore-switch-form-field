@@ -9,6 +9,7 @@ const React = require('react');
 const Switch = require('uxcore-switch');
 const FormField = require('uxcore-form-field');
 const assign = require('object-assign');
+const Constants = require('uxcore-const');
 
 class SwitchFormField extends FormField {
 
@@ -29,9 +30,14 @@ class SwitchFormField extends FormField {
   renderField() {
     const me = this;
     const switchProps = {...me.props};
-
+    const mode = me.props.jsxmode || me.props.mode;
+    if (mode === Constants.MODE.EDIT) {
+      return (
+        <Switch {...switchProps} checked={me.state.value} onChange={me.handleChange.bind(me)} style={{}} className="" />
+      );
+    }
     return (
-      <Switch {...switchProps} checked={me.state.value} onChange={me.handleChange.bind(me)} style={{}}/>
+      <span>{me.state.value ? me.props.checkedChildren : me.props.unCheckedChildren}</span>
     );
   }
 }
