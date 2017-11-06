@@ -37,9 +37,9 @@ class SwitchFormField extends FormField {
 
     switchUselessPropKeys.forEach(key => {
       if (switchProps.hasOwnProperty(key)) {
-        delete switchProps[key]
+        delete switchProps[key];
       }
-    })
+    });
 
     const mode = me.props.jsxmode || me.props.mode;
 
