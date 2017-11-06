@@ -48,7 +48,7 @@
     "object-assign": "^4.0.0",
     "uxcore-const": "0.0.2",
     "uxcore-form-field": "~0.1.5",
-    "uxcore-switch": "~0.1.5"
+    "uxcore-switch": "~0.1.6"
   },
   "contributors": [],
   "license": "MIT"
