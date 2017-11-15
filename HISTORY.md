@@ -1,5 +1,9 @@
 # history
 
+## 0.1.4
+
+`CHANGED` update `uxcore-form-field` to `^0.2.0`
+
 ## 0.1.3
 
 `CHANGED` React 15.6.x adaptation.

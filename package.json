@@ -1,6 +1,6 @@
 {
  "name": "uxcore-switch-form-field",
- "version": "0.1.5",
+ "version": "0.2.26",
  "description": "uxcore-switch-form-field component for uxcore.",
  "repository": "https://github.com/uxcore/uxcore-switch-form-field.git",
  "author": "eternalsky",
@@ -47,7 +47,7 @@
   "classnames": "^2.1.2",
   "object-assign": "^4.0.0",
   "uxcore-const": "0.0.2",
-  "uxcore-form-field": "~0.1.5",
+  "uxcore-form-field": "^0.2.0",
   "uxcore-switch": "~0.1.6"
  },
  "contributors": [],
