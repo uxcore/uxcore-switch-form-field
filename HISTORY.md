@@ -1,6 +1,6 @@
 # history
 
-## 0.1.4
+## 0.1.6
 
 `CHANGED` update `uxcore-form-field` to `^0.2.0`
 
