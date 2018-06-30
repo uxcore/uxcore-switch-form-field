@@ -21,6 +21,8 @@ function getSwitchProps(formFieldProps) {
     .forEach(key => {
       ret[key] = props[key]
     });
+
+  return ret
 }
 
 class SwitchFormField extends FormField {
