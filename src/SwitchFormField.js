@@ -5,21 +5,34 @@
  * Copyright 2015-2016, Uxcore Team, Alinw.
  * All rights reserved.
  */
-import React from 'react'
-import Switch from 'uxcore-switch'
-import FormField from 'uxcore-form-field'
-import assign from 'object-assign'
-import Constants from 'uxcore-const'
+import React from 'react';
+import Switch from 'uxcore-switch';
+import FormField from 'uxcore-form-field';
+import assign from 'object-assign';
+import Constants from 'uxcore-const';
+
+const switchPropKeys = Object.keys(Switch.propTypes);
+
+function getSwitchProps(formFieldProps) {
+  const ret = {}
+  
+  switchPropKeys
+    .filter(key => formFieldProps.hasOwnProperty(key))
+    .forEach(key => {
+      ret[key] = props[key]
+    });
+}
 
 class SwitchFormField extends FormField {
 
   addSpecificClass() {
-    let me = this;
+    const me = this;
+
     if (me.props.jsxprefixCls === "kuma-uxform-field") {
-      return me.props.jsxprefixCls + " kuma-switch-uxform-field";
-    } else {
-      return me.props.jsxprefixCls
+      return `${me.props.jsxprefixCls} kuma-switch-uxform-field`;
     }
+
+    return me.props.jsxprefixCls;
   }
 
   handleChange(checked) {
@@ -29,27 +42,29 @@ class SwitchFormField extends FormField {
 
   renderField() {
     const me = this;
-    const switchUselessPropKeys = [`jsxlabel`, `verticalAlign`, `labelMatchInputHeight`,
-      `jsxshow`, `jsxshowLabel`, `jsxprefixCls`, `jsxflex`, `jsxname`, `jsxplaceholder`,
-      `jsxtips`, `standalone`, `jsxinstant`, `jsxVerticalAlign`, `jsxsize`, `asyncValidate`,
-      `totalFlex`, `attachFormField`, `detachFormField`, `handleDataChange`, `getValues`, `resetValues`];
-    const switchProps = {...me.props};
+    const { props, state } = me;
 
-    switchUselessPropKeys.forEach(key => {
-      if (switchProps.hasOwnProperty(key)) {
-        delete switchProps[key];
-      }
-    });
-
-    const mode = me.props.jsxmode || me.props.mode;
+    const switchProps = getSwitchProps(props);
+    const mode = props.jsxmode || props.mode;
+    const { checkedChildren, unCheckedChildren } = props;
 
     if (mode === Constants.MODE.EDIT) {
       return (
-        <Switch {...switchProps} checked={me.state.value} onChange={me.handleChange.bind(me)} style={{}} className="" />
+        <Switch
+          {...switchProps}
+          checked={state.value}
+          onChange={me.handleChange.bind(me)}
+          style={{}}
+          className="" />
       );
     }
+
     return (
-      <span>{me.state.value ? me.props.checkedChildren : me.props.unCheckedChildren}</span>
+      <span>
+        {
+          state.value ? checkedChildren : unCheckedChildren
+        }
+      </span>
     );
   }
 }
