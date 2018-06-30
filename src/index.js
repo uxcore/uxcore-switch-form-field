@@ -6,4 +6,4 @@
  * All rights reserved.
  */
 
-export default from './SwitchFormField'
+export default from './SwitchFormField';
