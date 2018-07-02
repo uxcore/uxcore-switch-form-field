@@ -1,57 +1,57 @@
 {
- "name": "uxcore-switch-form-field",
- "version": "0.1.8",
- "description": "uxcore-switch-form-field component for uxcore.",
- "repository": "https://github.com/uxcore/uxcore-switch-form-field.git",
- "author": "eternalsky",
- "main": "build/index.js",
- "scripts": {
-  "start": "uxcore-tools run start",
-  "server": "uxcore-tools run server",
-  "lint": "uxcore-tools run lint",
-  "build": "uxcore-tools run build",
-  "test": "uxcore-tools run test",
-  "coverage": "uxcore-tools run coverage",
-  "pub": "uxcore-tools run pub",
-  "dep": "uxcore-tools run dep",
-  "tnpm-dep": "uxcore-tools run tnpm-dep",
-  "chrome": "uxcore-tools run chrome",
-  "browsers": "uxcore-tools run browsers",
-  "saucelabs": "uxcore-tools run saucelabs",
-  "update": "uxcore-tools run update",
-  "tnpm-update": "uxcore-tools run tnpm-update"
- },
- "bugs": {
-  "url": "http://github.com/uxcore/uxcore-switch-form-field/issues"
- },
- "keywords": [
-  "react",
-  "react-component",
-  "uxcore-switch-form-field",
-  "SwitchFormField",
-  "component"
- ],
- "devDependencies": {
-  "babel-polyfill": "6.x",
-  "console-polyfill": "^0.2.2",
-  "enzyme": "^3.0.0",
-  "enzyme-adapter-react-16": "1.x",
-  "expect.js": "~0.3.1",
-  "kuma-base": "1.x",
-  "react": "16.x",
-  "react-dom": "16.x",
-  "react-test-renderer": "16.x",
-  "uxcore-form": "*",
-  "uxcore-kuma": "*",
-  "uxcore-tools": "^0.3.0"
- },
- "dependencies": {
-  "classnames": "^2.1.2",
-  "object-assign": "^4.0.0",
-  "uxcore-const": "^1.0.0",
-  "uxcore-form-field": "~0.3.0",
-  "uxcore-switch": "~0.1.11"
- },
- "contributors": [],
- "license": "MIT"
+  "name": "uxcore-switch-form-field",
+  "version": "0.1.9",
+  "description": "uxcore-switch-form-field component for uxcore.",
+  "repository": "https://github.com/uxcore/uxcore-switch-form-field.git",
+  "author": "eternalsky",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "uxcore-tools run start",
+    "server": "uxcore-tools run server",
+    "lint": "uxcore-tools run lint",
+    "build": "uxcore-tools run build",
+    "test": "uxcore-tools run test",
+    "coverage": "uxcore-tools run coverage",
+    "pub": "uxcore-tools run pub",
+    "dep": "uxcore-tools run dep",
+    "tnpm-dep": "uxcore-tools run tnpm-dep",
+    "chrome": "uxcore-tools run chrome",
+    "browsers": "uxcore-tools run browsers",
+    "saucelabs": "uxcore-tools run saucelabs",
+    "update": "uxcore-tools run update",
+    "tnpm-update": "uxcore-tools run tnpm-update"
+  },
+  "bugs": {
+    "url": "http://github.com/uxcore/uxcore-switch-form-field/issues"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "uxcore-switch-form-field",
+    "SwitchFormField",
+    "component"
+  ],
+  "devDependencies": {
+    "babel-polyfill": "6.x",
+    "console-polyfill": "^0.2.2",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "1.x",
+    "expect.js": "~0.3.1",
+    "kuma-base": "1.x",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-test-renderer": "16.x",
+    "uxcore-form": "*",
+    "uxcore-kuma": "*",
+    "uxcore-tools": "^0.3.0"
+  },
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "object-assign": "^4.0.0",
+    "uxcore-const": "^1.0.0",
+    "uxcore-form-field": "~0.3.0",
+    "uxcore-switch": "~0.1.11"
+  },
+  "contributors": [],
+  "license": "MIT"
 }
