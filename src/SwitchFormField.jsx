@@ -14,23 +14,22 @@ import Constants from 'uxcore-const';
 const switchPropKeys = Object.keys(Switch.propTypes);
 
 function getSwitchProps(formFieldProps) {
-  const ret = {}
-  
+  const ret = {};
+
   switchPropKeys
-    .filter(key => formFieldProps.hasOwnProperty(key))
-    .forEach(key => {
-      ret[key] = props[key]
+    .filter(key => Object.keys(formFieldProps).indexOf(key) !== -1)
+    .forEach((key) => {
+      ret[key] = formFieldProps[key];
     });
 
-  return ret
+  return ret;
 }
 
 class SwitchFormField extends FormField {
-
   addSpecificClass() {
     const me = this;
 
-    if (me.props.jsxprefixCls === "kuma-uxform-field") {
+    if (me.props.jsxprefixCls === 'kuma-uxform-field') {
       return `${me.props.jsxprefixCls} kuma-switch-uxform-field`;
     }
 
@@ -57,7 +56,8 @@ class SwitchFormField extends FormField {
           checked={state.value}
           onChange={me.handleChange.bind(me)}
           style={{}}
-          className="" />
+          className=""
+        />
       );
     }
 
