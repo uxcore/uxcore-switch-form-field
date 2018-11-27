@@ -85,7 +85,8 @@ class SwitchFormField extends FormField {
         value={value ? RadioValues.On : RadioValues.Off}
         onChange={this.handleChange.bind(this)}
         style={{}}
-        className="">
+        className=""
+      >
         <Item value={RadioValues.On} text={checkedChildren} />
         <Item value={RadioValues.Off} text={unCheckedChildren} />
       </RadioGroup>
@@ -116,7 +117,7 @@ class SwitchFormField extends FormField {
     const { checkedChildren, unCheckedChildren, useRadioGroup } = props;
 
     if (mode === Constants.MODE.EDIT) {
-      return useRadioGroup ? this.renderRadioGroup() : this.renderSwitch()
+      return useRadioGroup ? this.renderRadioGroup() : this.renderSwitch();
     }
 
     return (
