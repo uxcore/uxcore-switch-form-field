@@ -18,11 +18,16 @@ class Demo extends React.Component {
     };
   }
 
+  handleChange (data) {
+    console.log('change', data)
+  }
+
   render() {
     return (
       <div>
-        <Form>
-          <SwitchFormField jsxlabel="开关" checkedChildren="是" unCheckedChildren="否" />
+        <Form jsxonChange={this.handleChange.bind(this)}>
+          <SwitchFormField jsxname="switch" jsxlabel="Switch模式" checkedChildren="是" unCheckedChildren="否" />
+          <SwitchFormField jsxname="radio" useRadioGroup jsxlabel="Radio模式" checkedChildren="是" unCheckedChildren="否" />
         </Form>
       </div>
     );
