@@ -72,4 +72,4 @@ Yes please! See the [CONTRIBUTING](https://github.com/uxcore/uxcore/blob/master/
 
 | Name | Type | Required | Default | Comments |
 |---|---|---|---|---|
-
+|useRadioGroup|boolean|optional|false|编辑态是否使用RadioGroup渲染|
